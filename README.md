@@ -71,7 +71,7 @@ Contribuições são o que fazem a comunidade open source um lugar incrível par
 2. Crie uma Branch para você (`git checkout -b user/Seu Nome`)
 3. Adicione suas mudanças (`git add .`)
 4. Comite suas mudanças (`git commit -m 'Adicionando uma Feature incrível!`)
-5. Faça o Push da Branch (`git push origin user`)
+5. Faça o Push da Branch (`git push origin user/Seu Nome`)
 6. Abra uma Pull Request
 
 ## Repositório
