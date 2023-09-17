@@ -5,6 +5,9 @@
   "icon": "img/firecast.png",
   "version": "0.0.1",
   "repository": "https://github.com/Krampus-update/Firecast-Snippets",
+  "scripts": {
+    "deploy": "vsce publish --yarn"
+  },
   "galleryBanner": {
     "color": "#7159c1",
     "theme": "dark"
@@ -23,5 +26,8 @@
       }
     ]
   },
-  "publisher": "PedroLuca"
+  "publisher": "PedroLuca",
+  "devDependencies": {
+    "@vscode/vsce": "^2.21.0"
+  }
 }
