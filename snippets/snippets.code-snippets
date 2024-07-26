@@ -209,7 +209,9 @@
 	"rectangle": {
 		"prefix": "rectangle",
 		"body": [
-			"<rectangle align='$1' height='$2' color='$3'/>"
+			"<rectangle align='$1'>\n"
+			"$2\n"
+			"</rectangle>"
 		],
 		"description": "A tag/componente rectangle representa um retângulo na interface o qual você pode personalizar cores, bordas e outros aspectos da forma."
 	},
