@@ -3,9 +3,8 @@
 		"prefix": "Novo Modelo de Ficha",
 		"body": [
 			"<?xml version='1.0' encoding='UTF-8'?>",
-			"<form formType='sheetTemplate' dataType='$1'",
-			"\ttitle='$2' name='$3'>",
-			"\n",
+			"<form formType='sheetTemplate' dataType='$1' title='$2' name='$3'>",
+			"\n$4",
 			"</form>"
 		],
 		"description": "Cada modelo de ficha do SDK3 é um documento Lua Form (extensão ‘.lfm’) e toda vez que o usuário abre um personagem, o RRPG Firecast localiza o Lua Form adequado, cria uma nova instância e a exibe na tela."
