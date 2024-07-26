@@ -23,7 +23,9 @@
       {
         "language": "xml",
         "path": "./snippets/snippets.code-snippets"
-      }
+      },
+      {"language": "lfm",
+        "path": "./snippets/snippets.code-snippets"}
     ]
   },
   "publisher": "PedroLuca",
