@@ -1,29 +1,25 @@
-# This is a basic workflow to help you get started with Actions
-
-name: CI
+name: Publish to VS Marketplace
 
 on:
-  push:
-    branches:
-    - main
   release:
-    types:
-    - created
-  pull_request:
-    branches: [ "main" ]
-
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+    types: [published]
 
 jobs:
-  build:
-    strategy:
-      matrix:
-        os: [macos-latest, ubuntu-latest, windows-latest]
-    runs-on: ${{ matrix.os }}
+  publish:
+    runs-on: windows-latest
     steps:
-    - name: Publish
-      if: success() && startsWith(github.ref, 'refs/tags/') && matrix.os == 'ubuntu-latest'
-      run: npm run deploy
-      env:
-        VSCE_PAT: ${{ secrets.VSCE_PAT }}
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Publish release to marketplace
+        id: publish
+        uses: mrluje/vs-marketplace-publisher@v2
+        with:
+          # (Required) Personal access token to perform action on the VS Marketplace
+          pat: ${{ secrets.vs_pat }}
+
+          # (Required) Path to the manifest used for the publish
+          manifestPath: vs-extension/vsixManifest.json
+
+          # (Optional) Fetch the latest release container a vsix package for upload to the VS Marketplace
+          useLatestReleaseAsset: true
