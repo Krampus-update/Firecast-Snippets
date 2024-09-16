@@ -16,7 +16,8 @@
     "vscode": "^1.82.0"
   },
   "categories": [
-    "Snippets"
+    "Snippets",
+    "Extension Packs"
   ],
   "contributes": {
     "grammars": [
