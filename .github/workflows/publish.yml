@@ -1,7 +1,8 @@
 name: Publish to VS Marketplace
 
 env:
-  vsixContainer: \Firecast_Extesion.vsix  
+  vsixContainer: Firecast_Extesion.vsix 
+
 on:
   release:
     types: [published]
