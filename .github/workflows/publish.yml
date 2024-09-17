@@ -3,9 +3,10 @@ name: Publish to VS Marketplace
 env:
   vsixContainer: Firecast_Extesion.vsix 
 
-on:
-  release:
-    types: [published]
+on: 
+  push:
+    branches:
+      - main
 
 jobs:
   publish:
