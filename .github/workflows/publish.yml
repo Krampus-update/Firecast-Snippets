@@ -1,8 +1,5 @@
 name: Publish to VS Marketplace
 
-env:
-  vsixContainer: Firecast_Extesion.vsix 
-
 on: 
   push:
     branches:
@@ -27,6 +24,3 @@ jobs:
 
           # (Optional) Fetch the latest release container a vsix package for upload to the VS Marketplace
           useLatestReleaseAsset: true
-
-          # (Optional) Path to an extension package
-          vsixPath: ${{ env.vsixContainer }}
