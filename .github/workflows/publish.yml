@@ -3,7 +3,7 @@ name: Publish to VS Marketplace
 env:
   config: Release
   solution: vs-extension.sln
-  vsixContainer: ${{ github.workspace }}\vs-extension.vsix
+  vsixContainer: ${{ github.workspace }} \Firecast-Snippets\Firecast_Extesion.vsix
 
 on:
   push:
