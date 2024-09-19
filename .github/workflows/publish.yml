@@ -3,7 +3,7 @@ name: Publish to VS Marketplace
 env:
   config: Release
   solution: vs-extension.sln
-  vsixContainer: ${{ github.workspace }} \Firecast-Snippets\Firecast_Extesion.vsix
+  vsixContainer: ${{ github.workspace }}\Firecast_Support.vsix
 
 on:
   push:
@@ -42,3 +42,6 @@ jobs:
 
           # (Required) Path to the manifest used for the publish
           manifestPath: vs-extension/vsixManifest.json
+
+          # (Optional) Path to an extension package
+          vsixPath: ${{ env.vsixContainer }}
